@@ -8,8 +8,8 @@
     "start": "node src/index.js",
     "build": "npx webpack",
     "start:build": "node dist/index.js",
-    "format": "echo \"Error: no format specified\" && exit 1",
-    "lint": "echo \"Error: no lint specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:e2e": "echo \"Error: no test:e2e specified\" && exit 1"
   },
@@ -17,8 +17,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-order": "^2.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-node-externals": "^3.0.0"
-  }
+  },
+  "dependencies": {}
 }
