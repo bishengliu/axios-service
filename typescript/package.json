@@ -51,5 +51,8 @@
       "./"
     ],
     "moduleNameMapper": {}
+  },
+  "dependencies": {
+    "winston": "^3.7.2"
   }
 }
